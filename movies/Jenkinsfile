@@ -10,8 +10,8 @@ pipeline {
     }
 
     environment {
-        DEV_PROJECT = "youruser-movies-dev"
-        STAGE_PROJECT = "youruser-movies-stage"
+        DEV_PROJECT = "akaul-ca-ibm-com-movies-dev"
+        STAGE_PROJECT = "akaul-ca-ibm-com-movies-stage"
         APP_GIT_URL = "https://github.com/ambikakaul1/DO288-apps"
         NEXUS_SERVER = "http://nexus-common.apps.ocp-na2.prod.nextcle.com/repository/java"
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
