@@ -53,7 +53,6 @@ pipeline {
                 echo '### Cleaning existing resources in DEV env ###'
                 sh '''
                         oc project ${DEV_PROJECT}
-                        #oc delete all -l app=${APP_NAME}
                         oc delete all --selector app=books
                         sleep 5
                    '''
@@ -119,7 +118,6 @@ pipeline {
                 echo '### Cleaning existing resources in Staging ###'
                 sh '''
                         oc project ${STAGE_PROJECT}
-                        #oc delete all -l app=${APP_NAME}
                         oc delete all --selector app=${APP_NAME}
                         sleep 5
                    '''
