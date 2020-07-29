@@ -112,13 +112,12 @@ pipeline {
         }
 
 
-
         stage('Deploy to Staging Env') {
             steps {
                 echo '### Cleaning existing resources in Staging ###'
                 sh '''
                         oc project ${STAGE_PROJECT}
-                        oc delete all --selector app=${APP_NAME}
+                        oc delete all -l app=${APP_NAME}
                         sleep 5
                    '''
 
